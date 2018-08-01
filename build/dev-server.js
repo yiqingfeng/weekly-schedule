@@ -65,6 +65,11 @@ app.use(require('connect-history-api-fallback')());
 var staticPath = path.posix.join(config.dev.assetsPublicPath, config.dev.assetsSubDirectory);
 app.use(staticPath, express.static('./static'));
 
+var _resolve;
+var readyPromise = new Promise(resolve => {
+    _resolve = resolve;
+})
+
 // console.log('> Starting dev server...')
 // devMiddleware.waitUntilValid(() => {
 //   console.log('> Listening at ' + uri + '\n')
