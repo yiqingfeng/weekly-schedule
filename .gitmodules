@@ -1,0 +1,3 @@
+[submodule "libs/mp-weui"]
+	path = libs/mp-weui
+	url = https://github.com/yiqingfeng/mp-weui.git
